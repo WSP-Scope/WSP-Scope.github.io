@@ -21,7 +21,7 @@
   <script id="project-config">
     window.PROJECT = {
   "title": "Exploring Weight-Space Programming: Capabilities, Generalization, and Limitations",
-  "paper": "https://github.com/WSP-Scope/WSP-Scope-Project",
+  "paper": "https://github.com/WSP-Scope/WSP-Scope-Project/blob/main/WSP-Scope-Project.pdf",
   "authors": [
     {
       "name": "Junru Hu",
@@ -204,7 +204,7 @@
       <details class="protocol-expand"><summary data-zh="技术与评估细节">Technical & evaluation details</summary><div class="protocol-content">
       <div class="equation-row"><div class="equation" aria-label="Theta at t plus one equals BF16 of theta t plus delta theta t"><i>θ</i><sub>t+1</sub> = bf16(<i>θ</i><sub>t</sub> + Δ<i>θ</i><sub>t</sub>)</div><p data-zh="更新以 FP32 计算，以 BF16 存储。整个编辑过程不使用梯度、反向传播或优化器。">Updates are computed in float32 and stored in bfloat16. Editing uses no gradients, backward passes, or optimizers.</p></div>
       <div class="protocol-details"><div><strong data-zh="受约束的编辑范围">A constrained editing space</strong><p data-zh="仅编辑允许的 Transformer 块参数；词嵌入、最终归一化、语言模型头与架构固定。">Admissible transformer-block parameters only. Embeddings, final normalization, the LM head, and architecture remain fixed.</p></div><div><strong data-zh="两类前向反馈">Two feedback modes</strong><p data-zh="生成请求提供任务得分；教师强制提供条件对数概率与激活，不产生任务准确率。">Generation provides task scores. Teacher forcing returns conditional log-probabilities and activations, not task accuracy.</p></div><div><strong data-zh="独立的测试评估">Held-out comparisons</strong><p data-zh="编辑智能体不接触测试问题；原始模型与编辑模型在匹配的评估设置下比较。">Test questions are hidden from the editor. Base and edited models are compared under matched evaluation settings.</p></div></div>
-      <p class="source-note" style="margin-top:24px"><a data-paper data-paper-page="3" target="_blank" rel="noopener" data-zh="来源：方法部分、图 2 与附录 A–B" href="https://github.com/WSP-Scope/WSP-Scope-Project">Source: Methods, Figure 2, and Appendix A–B</a></p>
+      <p class="source-note" style="margin-top:24px"><a data-paper data-paper-page="3" target="_blank" rel="noopener" data-zh="来源：方法部分、图 2 与附录 A–B" href="https://github.com/WSP-Scope/WSP-Scope-Project/blob/main/WSP-Scope-Project.pdf">Source: Methods, Figure 2, and Appendix A–B</a></p>
       </div></details>
     </div></section>
 
@@ -234,8 +234,8 @@
     <section class="section takeaways-section" id="takeaways" aria-labelledby="takeaways-title"><div class="wrap">
       <h2 class="section-heading" id="takeaways-title" data-zh="迁移与可靠性">Beyond the headline result.</h2>
       <div class="takeaways-grid">
-        <article><span class="takeaway-label" data-zh="跨任务泛化">Cross-task transfer</span><h3 data-zh="一次编辑，可以影响其他任务。">One edit can affect other tasks.</h3><p data-zh="任务内的提升不保证全面受益。MATH 编辑后的模型无需额外修改权重，便可影响科学问答、指令遵循和科学推理；迁移方向与幅度仍随目标任务而变化。">A MATH-edited checkpoint can affect scientific QA, instruction following, and scientific reasoning without further editing. Transfer is uneven: a gain on one task does not guarantee improvements everywhere.</p><a class="text-link" data-paper data-paper-page="7" target="_blank" rel="noopener" href="https://github.com/WSP-Scope/WSP-Scope-Project"><span data-zh="查看迁移实验">See transfer experiments</span><span aria-hidden="true">↗</span></a></article>
-        <article><span class="takeaway-label" data-zh="可靠性与局限">Reliability & limitations</span><h3 data-zh="16 条轨迹中，6 条保留原始权重。">6 of 16 searches keep the original.</h3><p data-zh="开发集上的改善不一定能在留出测试集上成立。有效干预的发现仍不稳定，而且相同的请求次数并不意味着相同计算成本。">Development gains do not always hold up on unseen questions. Finding effective interventions remains inconsistent, and an equal request budget does not mean equal computational cost.</p><a class="text-link" data-paper data-paper-page="8" target="_blank" rel="noopener" href="https://github.com/WSP-Scope/WSP-Scope-Project"><span data-zh="阅读讨论">Read the discussion</span><span aria-hidden="true">↗</span></a></article>
+        <article><span class="takeaway-label" data-zh="跨任务泛化">Cross-task transfer</span><h3 data-zh="一次编辑，可以影响其他任务。">One edit can affect other tasks.</h3><p data-zh="任务内的提升不保证全面受益。MATH 编辑后的模型无需额外修改权重，便可影响科学问答、指令遵循和科学推理；迁移方向与幅度仍随目标任务而变化。">A MATH-edited checkpoint can affect scientific QA, instruction following, and scientific reasoning without further editing. Transfer is uneven: a gain on one task does not guarantee improvements everywhere.</p><a class="text-link" data-paper data-paper-page="7" target="_blank" rel="noopener" href="https://github.com/WSP-Scope/WSP-Scope-Project/blob/main/WSP-Scope-Project.pdf"><span data-zh="查看迁移实验">See transfer experiments</span><span aria-hidden="true">↗</span></a></article>
+        <article><span class="takeaway-label" data-zh="可靠性与局限">Reliability & limitations</span><h3 data-zh="16 条轨迹中，6 条保留原始权重。">6 of 16 searches keep the original.</h3><p data-zh="开发集上的改善不一定能在留出测试集上成立。有效干预的发现仍不稳定，而且相同的请求次数并不意味着相同计算成本。">Development gains do not always hold up on unseen questions. Finding effective interventions remains inconsistent, and an equal request budget does not mean equal computational cost.</p><a class="text-link" data-paper data-paper-page="8" target="_blank" rel="noopener" href="https://github.com/WSP-Scope/WSP-Scope-Project/blob/main/WSP-Scope-Project.pdf"><span data-zh="阅读讨论">Read the discussion</span><span aria-hidden="true">↗</span></a></article>
       </div>
     </div></section>
 
@@ -244,7 +244,7 @@
       <div><div class="citation-header"><h3 data-zh="BibTeX 引用">BibTeX citation</h3><button class="copy-button" id="copy-citation" data-zh="复制 BibTeX">Copy BibTeX</button></div><pre class="citation-box" id="citation">@misc{weightspaceprogramming,
   title = {Exploring Weight-Space Programming: Capabilities, Generalization, and Limitations},
   author = {Junru Hu and Cheng Tang and Wei Li and Hongze Zhu and Chun-Mei Feng and Qi Zhang and Yirong Chen and Ming Hu},
-  url = {https://github.com/WSP-Scope/WSP-Scope-Project}
+  url = {https://github.com/WSP-Scope/WSP-Scope-Project/blob/main/WSP-Scope-Project.pdf}
 }</pre><p class="citation-note" data-zh="本研究稿件的引用信息。">Citation for this research manuscript.</p></div>
     </div></section>
   </main>
@@ -311,7 +311,6 @@
         a.classList.toggle('paper-pending',!paperURL);
         if(paperURL){
           const target=new URL(paperURL.href);
-          if(a.dataset.paperPage && /\.pdf$/i.test(target.pathname) && !target.hash) target.hash='page='+a.dataset.paperPage;
           a.href=target.href; a.target='_blank'; a.rel='noopener';
           a.removeAttribute('aria-disabled'); a.removeAttribute('tabindex'); a.removeAttribute('title');
         } else {
